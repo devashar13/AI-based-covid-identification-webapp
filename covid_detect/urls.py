@@ -24,7 +24,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('' , include(  'root.urls')),
     path('',auth_views.LoginView.as_view(template_name='root/login.html'), name="login"),
-    path('register/',views.register, name="register"),
-    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), ]
+    path('register/',views.register, name="register"),]
+    
 
