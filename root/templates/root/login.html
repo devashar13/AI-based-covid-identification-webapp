@@ -1,7 +1,35 @@
 {% load crispy_forms_tags %}
-<body>
+{% load static %}
+<head> 
+    <meta charset="UTF-8"> 
+    <title>X-Ray</title> 
     
+{% comment %}     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+`   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Sacramento&display=swap" rel="stylesheet"> {% endcomment %}
+      <link rel="stylesheet" href="{% static 'root/main.css' %}">
+</head> 
+
+
+<body>
+<header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+          <div class="container">
+           
+            
+            <span class="navbar-toggler-icon"></span>
+           
+            <div class="collapse navbar-collapse" id="navbarToggle">
+             
+             
+            </div>
+          </div>
+        </nav>
+      </header>
+
+   
     <div class="content-section">
+        
         <form method="POST">
             {%csrf_token%}
             <fieldset class="form-group">
@@ -19,4 +47,5 @@
         </div>
 
     </div>
+    
 </body>
